@@ -23,7 +23,7 @@ jobs:
         run: |
           IMAGE_TAG=${{ github.run_number }}
           REGISTRY_URL=${{ secrets.ACR_NAME }}.azurecr.io
-          IMAGE_NAME="straznik-ruchu-app"
+          IMAGE_NAME="traffic-guard-app"
           
           # Budowanie obrazu z dwoma tagami: numer uruchomienia oraz 'latest'
           docker build -t $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG -t $REGISTRY_URL/$IMAGE_NAME:latest .
